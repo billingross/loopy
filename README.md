@@ -1,2 +1,2 @@
 # mina
-My goal is to design a model that will make predictions.
+I want a model that will make predictions.
