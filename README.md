@@ -1,2 +1,2 @@
 # mina
-I want a model that will make predictions.
+I want a slick model that will make predictions.
