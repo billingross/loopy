@@ -116,7 +116,7 @@ This is not particularly useful for me because I want to identify patterns withi
 ### Read the data into a row-oriented matrix
 I will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.
 ```{python}
-football_plays_filename = "posts/football-plays/football-plays-2024.csv"
+football_plays_filename = "football-plays-2024.csv"
 row_oriented_matrix = read_comma_separated_values_as_matrix(football_plays_filename)
 print(f"This matrix contains ({len(row_oriented_matrix)}) rows and ({len(row_oriented_matrix[0])}) columns.")
 ```
