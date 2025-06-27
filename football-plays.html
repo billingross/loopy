@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="import-dependencies" class="level1">
 <h1>Import dependencies</h1>
-<div id="c2f80dcb" class="cell" data-execution_count="1">
+<div id="f24fbbf8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data from a comma separated values file</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate statistics</span></span>
@@ -271,7 +271,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="functions" class="level1">
 <h1>Functions</h1>
-<div id="621d8584" class="cell" data-execution_count="2">
+<div id="76874081" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_comma_separated_values_as_matrix(filename: <span class="bu">str</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Read a comma separated values file into a matrix represented as a list of lists.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -286,7 +286,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        data_as_list_of_lists <span class="op">=</span> <span class="bu">list</span>(reader)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> data_as_list_of_lists     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fb3c3f46" class="cell" data-execution_count="3">
+<div id="8c63af06" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cast_list_values_as_floats(this_list: <span class="bu">list</span>):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Try to convert a list of arbitrary values to floats.</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -301,7 +301,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        float_values <span class="op">=</span> []</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> float_values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f6a21469" class="cell" data-execution_count="4">
+<div id="3266449c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_summary_statistics(this_list: <span class="bu">list</span>):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate summary statistics for a list of quantitative data.</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -339,7 +339,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    summary_statistics[<span class="st">"count"</span>] <span class="op">=</span> <span class="bu">len</span>(this_list_floats)</span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> summary_statistics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="95e055fa" class="cell" data-execution_count="5">
+<div id="03c0d847" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transpose_matrix(this_matrix: <span class="bu">list</span>):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Transpose a matrix represented as a list of lists.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -361,7 +361,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <section id="read-the-data-into-a-row-oriented-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="read-the-data-into-a-row-oriented-matrix">Read the data into a row-oriented matrix</h3>
 <p>I will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.</p>
-<div id="4095cb83" class="cell" data-execution_count="6">
+<div id="88326ebe" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>football_plays_filename <span class="op">=</span> <span class="st">"posts/football-plays/football-plays-2024.csv"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>row_oriented_matrix <span class="op">=</span> read_comma_separated_values_as_matrix(football_plays_filename)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"This matrix contains (</span><span class="sc">{</span><span class="bu">len</span>(row_oriented_matrix)<span class="sc">}</span><span class="ss">) rows and (</span><span class="sc">{</span><span class="bu">len</span>(row_oriented_matrix[<span class="dv">0</span>])<span class="sc">}</span><span class="ss">) columns."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -372,7 +372,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="transpose-matrix-so-that-it-is-column-oriented" class="level3">
 <h3 class="anchored" data-anchor-id="transpose-matrix-so-that-it-is-column-oriented">Transpose matrix so that it is column-oriented</h3>
-<div id="dd4ee8ce" class="cell" data-execution_count="7">
+<div id="b6186fde" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>columnar_matrix <span class="op">=</span> transpose_matrix(row_oriented_matrix)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"This matrix contains (</span><span class="sc">{</span><span class="bu">len</span>(columnar_matrix)<span class="sc">}</span><span class="ss">) columns and (</span><span class="sc">{</span><span class="bu">len</span>(columnar_matrix[<span class="dv">0</span>])<span class="sc">}</span><span class="ss">) rows."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -384,12 +384,12 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <section id="get-all-of-my-column-names" class="level2">
 <h2 class="anchored" data-anchor-id="get-all-of-my-column-names">Get all of my column names</h2>
 <p>Now I want to validate that my data is organized as expected by getting the first item in all of my columns. I expect this to be the name of the column because I have not parsed out the names from the data.</p>
-<div id="42f24b37" class="cell" data-execution_count="8">
+<div id="149c9a82" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>column_names <span class="op">=</span> [column[<span class="dv">0</span>] <span class="cf">for</span> column <span class="kw">in</span> columnar_matrix]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pandas.DataFrame(column_names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_acfbc1f8_0ebe_4bf8_9c63_0666ad5901c7"><tbody><tr>
+<table id="itables_1c045ba0_cc37_4dbc_8f9d_e53ef8988e4f"><tbody><tr>
     <td style="vertical-align:middle; text-align:left">
     <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
@@ -454,11 +454,11 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <script type="module">
     const { ITable, jQuery: $ } = await import(window._datatables_src_for_itables_2_4_2);
 
-    document.querySelectorAll("#itables_acfbc1f8_0ebe_4bf8_9c63_0666ad5901c7:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_1c045ba0_cc37_4dbc_8f9d_e53ef8988e4f:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "classes": ["display", "nowrap"], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "order": [], "text_in_header_can_be_selected": true, "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>0</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"GameId\"], [\"GameDate\"], [\"Quarter\"], [\"Minute\"], [\"Second\"], [\"OffenseTeam\"], [\"DefenseTeam\"], [\"Down\"], [\"ToGo\"], [\"YardLine\"], [\"\"], [\"SeriesFirstDown\"], [\"\"], [\"NextScore\"], [\"Description\"], [\"TeamWin\"], [\"\"], [\"\"], [\"SeasonYear\"], [\"Yards\"], [\"Formation\"], [\"PlayType\"], [\"IsRush\"], [\"IsPass\"], [\"IsIncomplete\"], [\"IsTouchdown\"], [\"PassType\"], [\"IsSack\"], [\"IsChallenge\"], [\"IsChallengeReversed\"], [\"Challenger\"], [\"IsMeasurement\"], [\"IsInterception\"], [\"IsFumble\"], [\"IsPenalty\"], [\"IsTwoPointConversion\"], [\"IsTwoPointConversionSuccessful\"], [\"RushDirection\"], [\"YardLineFixed\"], [\"YardLineDirection\"], [\"IsPenaltyAccepted\"], [\"PenaltyTeam\"], [\"IsNoPlay\"], [\"PenaltyType\"], [\"PenaltyYards\"]]"};
+        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "order": [], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "classes": ["display", "nowrap"], "text_in_header_can_be_selected": true, "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>0</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"GameId\"], [\"GameDate\"], [\"Quarter\"], [\"Minute\"], [\"Second\"], [\"OffenseTeam\"], [\"DefenseTeam\"], [\"Down\"], [\"ToGo\"], [\"YardLine\"], [\"\"], [\"SeriesFirstDown\"], [\"\"], [\"NextScore\"], [\"Description\"], [\"TeamWin\"], [\"\"], [\"\"], [\"SeasonYear\"], [\"Yards\"], [\"Formation\"], [\"PlayType\"], [\"IsRush\"], [\"IsPass\"], [\"IsIncomplete\"], [\"IsTouchdown\"], [\"PassType\"], [\"IsSack\"], [\"IsChallenge\"], [\"IsChallengeReversed\"], [\"Challenger\"], [\"IsMeasurement\"], [\"IsInterception\"], [\"IsFumble\"], [\"IsPenalty\"], [\"IsTwoPointConversion\"], [\"IsTwoPointConversionSuccessful\"], [\"RushDirection\"], [\"YardLineFixed\"], [\"YardLineDirection\"], [\"IsPenaltyAccepted\"], [\"PenaltyTeam\"], [\"IsNoPlay\"], [\"PenaltyType\"], [\"PenaltyYards\"]]"};
         new ITable(table, dt_args);
     });
 </script>
@@ -467,7 +467,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="generate-summary-statistics-for-each-column" class="level2">
 <h2 class="anchored" data-anchor-id="generate-summary-statistics-for-each-column">Generate summary statistics for each column</h2>
-<div id="230808ab" class="cell" data-execution_count="9">
+<div id="9d71069f" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>summary_statistics_list <span class="op">=</span> [calculate_summary_statistics(column) <span class="cf">for</span> column <span class="kw">in</span> columnar_matrix]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(summary_statistics_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
@@ -477,12 +477,12 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <section id="view-the-mean-of-every-metric" class="level3">
 <h3 class="anchored" data-anchor-id="view-the-mean-of-every-metric">View the mean of every metric</h3>
 <p>I can display a <a href="https://stackoverflow.com/a/46577585">dictionary as a dataframe</a> by putting square brackets around the variable name.</p>
-<div id="2469f0b1" class="cell" data-execution_count="10">
+<div id="337f09c9" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>metric_means <span class="op">=</span> {summary[<span class="st">'name'</span>]: summary[<span class="st">'mean'</span>] <span class="cf">for</span> summary <span class="kw">in</span> summary_statistics_list}</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pandas.DataFrame([metric_means])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_e7483b17_63c9_4b2a_b367_353a5ea6494e"><tbody><tr>
+<table id="itables_ccfac6b6_e35b_48a6_9731_2aff2bc87389"><tbody><tr>
     <td style="vertical-align:middle; text-align:left">
     <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
@@ -547,11 +547,11 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <script type="module">
     const { ITable, jQuery: $ } = await import(window._datatables_src_for_itables_2_4_2);
 
-    document.querySelectorAll("#itables_e7483b17_63c9_4b2a_b367_353a5ea6494e:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_ccfac6b6_e35b_48a6_9731_2aff2bc87389:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": null, "topEnd": null, "bottomStart": null, "bottomEnd": null}, "classes": ["display", "nowrap"], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "order": [], "text_in_header_can_be_selected": true, "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>GameId</th>\n      <th>GameDate</th>\n      <th>Quarter</th>\n      <th>Minute</th>\n      <th>Second</th>\n      <th>OffenseTeam</th>\n      <th>DefenseTeam</th>\n      <th>Down</th>\n      <th>ToGo</th>\n      <th>YardLine</th>\n      <th></th>\n      <th>SeriesFirstDown</th>\n      <th>NextScore</th>\n      <th>Description</th>\n      <th>TeamWin</th>\n      <th>SeasonYear</th>\n      <th>Yards</th>\n      <th>Formation</th>\n      <th>PlayType</th>\n      <th>IsRush</th>\n      <th>IsPass</th>\n      <th>IsIncomplete</th>\n      <th>IsTouchdown</th>\n      <th>PassType</th>\n      <th>IsSack</th>\n      <th>IsChallenge</th>\n      <th>IsChallengeReversed</th>\n      <th>Challenger</th>\n      <th>IsMeasurement</th>\n      <th>IsInterception</th>\n      <th>IsFumble</th>\n      <th>IsPenalty</th>\n      <th>IsTwoPointConversion</th>\n      <th>IsTwoPointConversionSuccessful</th>\n      <th>RushDirection</th>\n      <th>YardLineFixed</th>\n      <th>YardLineDirection</th>\n      <th>IsPenaltyAccepted</th>\n      <th>PenaltyTeam</th>\n      <th>IsNoPlay</th>\n      <th>PenaltyType</th>\n      <th>PenaltyYards</th>\n    </tr>\n  </thead></table>", "data_json": "[[2024196000.0, 0, 2.572134, 6.336261, 27.506559, 0, 0, 1.536156, 6.585797, 26.433328, 0, 0.412571, 0.0, 0, 0.0, 2024.0, 3.854644, 0, 0, 0.285832, 0.366928, 0.124299, 0.029859, 0, 0.027664, 0.00259, 0.000976, 0, 0.0, 0.008352, 0.012818, 0.074752, 0.002853, 0.001089, 0, 58.963628, 0, 0.066156, 0, 0.050129, 0, 0.523188]]"};
+        let dt_args = {"layout": {"topStart": null, "topEnd": null, "bottomStart": null, "bottomEnd": null}, "order": [], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "classes": ["display", "nowrap"], "text_in_header_can_be_selected": true, "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>GameId</th>\n      <th>GameDate</th>\n      <th>Quarter</th>\n      <th>Minute</th>\n      <th>Second</th>\n      <th>OffenseTeam</th>\n      <th>DefenseTeam</th>\n      <th>Down</th>\n      <th>ToGo</th>\n      <th>YardLine</th>\n      <th></th>\n      <th>SeriesFirstDown</th>\n      <th>NextScore</th>\n      <th>Description</th>\n      <th>TeamWin</th>\n      <th>SeasonYear</th>\n      <th>Yards</th>\n      <th>Formation</th>\n      <th>PlayType</th>\n      <th>IsRush</th>\n      <th>IsPass</th>\n      <th>IsIncomplete</th>\n      <th>IsTouchdown</th>\n      <th>PassType</th>\n      <th>IsSack</th>\n      <th>IsChallenge</th>\n      <th>IsChallengeReversed</th>\n      <th>Challenger</th>\n      <th>IsMeasurement</th>\n      <th>IsInterception</th>\n      <th>IsFumble</th>\n      <th>IsPenalty</th>\n      <th>IsTwoPointConversion</th>\n      <th>IsTwoPointConversionSuccessful</th>\n      <th>RushDirection</th>\n      <th>YardLineFixed</th>\n      <th>YardLineDirection</th>\n      <th>IsPenaltyAccepted</th>\n      <th>PenaltyTeam</th>\n      <th>IsNoPlay</th>\n      <th>PenaltyType</th>\n      <th>PenaltyYards</th>\n    </tr>\n  </thead></table>", "data_json": "[[2024196000.0, 0, 2.572134, 6.336261, 27.506559, 0, 0, 1.536156, 6.585797, 26.433328, 0, 0.412571, 0.0, 0, 0.0, 2024.0, 3.854644, 0, 0, 0.285832, 0.366928, 0.124299, 0.029859, 0, 0.027664, 0.00259, 0.000976, 0, 0.0, 0.008352, 0.012818, 0.074752, 0.002853, 0.001089, 0, 58.963628, 0, 0.066156, 0, 0.050129, 0, 0.523188]]"};
         new ITable(table, dt_args);
     });
 </script>
