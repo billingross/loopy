@@ -135,16 +135,43 @@ pandas.DataFrame(column_names)
 ```
 
 ## Generate summary statistics for each column
+This `calculate_summary_statistics()` function takes in a list as input and outputs a dictionary of summary statistics. A [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) is a mapping between a key such as `Yards` and a value such as `3.6`. I can also think of it as a pair of same length lists where each item in one list is connected to an item in the other list.
 ```{python}
-summary_statistics_list = [calculate_summary_statistics(column) for column in columnar_matrix]
-len(summary_statistics_list)
+list_of_summary_statistics = [calculate_summary_statistics(column) for column in columnar_matrix]
+len(list_of_summary_statistics)
 ```
 
 ### View the mean of every metric
-I can display a [dictionary as a dataframe](https://stackoverflow.com/a/46577585) by putting square brackets around the variable name.
+I can display a [dictionary as a dataframe](https://stackoverflow.com/a/46577585) by putting square brackets around the variable name. I am also going to ignore metrics with a mean of zero since I am assuming that they are uninformative.
 ```{python}
-metric_means = {summary['name']: summary['mean'] for summary in summary_statistics_list}
+metric_means = {summary['name']: summary['mean'] for summary in list_of_summary_statistics if summary['mean'] != 0}
 pandas.DataFrame([metric_means])
 ```
 
+## Organize summary statistics into a table
+I have calculated summary statistics column of my data. Now I want to organize that data into a table so that I can visualize it. I have created a dictionary of summary metrics for each dimension of my data such as `Yards` and I have stored all of those dictionaries in a list called `summary_statistics_list`. What I want is a table that looks something like the following.
 
+| name | mean | median | standard-deviation |
+| --- | --- | --- | --- |
+| Yards | 3.6 | 4.2 | 0.5 |
+| IsRush | 0.6 | 0.4 | 0.01 |
+
+This again looks like a matrix and so I think I will try to convert my list of dictionaries into a list of lists, which is how I am representing a matrix. Before I merge my dictionaries into a super dictionary I want to remove any dictionaries with a `count` value of zero because that indicates that I was not able to use any of the values and they will just add visual clutter.
+
+### Remove uninformative dictionaries
+```{python}
+clean_list_of_summary_statistics = [dictionary for dictionary in list_of_summary_statistics if dictionary['count'] > 0]
+print(f"There are ({len(clean_list_of_summary_statistics)}) columns which passed filtration out of the total of ({len(list_of_summary_statistics)}) columns for which I generated statistics.")
+```
+
+### Merge individual dictionaries into a super dictionary
+I recorded my thinking for using the list comprehension merged inside a dictionary comprehension in [this issue](https://github.com/billingross/loopy/issues/6).
+```{python}
+super_summary_statistics_dictionary = {key: [dictionary[key] for dictionary in clean_list_of_summary_statistics] for key in clean_list_of_summary_statistics[0].keys()}
+len(super_summary_statistics_dictionary)
+```
+
+### Visualize summary statistics table
+```{python}
+pandas.DataFrame(super_summary_statistics_dictionary)
+```
