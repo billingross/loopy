@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="import-dependencies" class="level1">
 <h1>Import dependencies</h1>
-<div id="cc6db4f8" class="cell" data-execution_count="1">
+<div id="62d6a737" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data from a comma separated values file</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate statistics</span></span>
@@ -272,7 +272,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="functions" class="level1">
 <h1>Functions</h1>
-<div id="9c61c09c" class="cell" data-execution_count="2">
+<div id="7444f5a2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_comma_separated_values_as_matrix(filename: <span class="bu">str</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Read a comma separated values file into a matrix represented as a list of lists.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -287,7 +287,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        data_as_list_of_lists <span class="op">=</span> <span class="bu">list</span>(reader)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> data_as_list_of_lists     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3fad3f1d" class="cell" data-execution_count="3">
+<div id="2bb84a49" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cast_list_values_as_floats(this_list: <span class="bu">list</span>):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Try to convert a list of arbitrary values to floats.</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -302,7 +302,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        float_values <span class="op">=</span> []</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> float_values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d26fc4f8" class="cell" data-execution_count="4">
+<div id="8a883323" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_summary_statistics(this_list: <span class="bu">list</span>):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate summary statistics for a list of quantitative data.</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -340,7 +340,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    summary_statistics[<span class="st">"count"</span>] <span class="op">=</span> <span class="bu">len</span>(this_list_floats)</span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> summary_statistics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="60d87e86" class="cell" data-execution_count="5">
+<div id="028ed5ec" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transpose_matrix(this_matrix: <span class="bu">list</span>):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Transpose a matrix represented as a list of lists.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -362,7 +362,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <section id="read-the-data-into-a-row-oriented-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="read-the-data-into-a-row-oriented-matrix">Read the data into a row-oriented matrix</h3>
 <p>I will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.</p>
-<div id="bda7d036" class="cell" data-execution_count="6">
+<div id="b462e95b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>football_plays_filename <span class="op">=</span> <span class="st">"football-plays-2024.csv"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>row_oriented_matrix <span class="op">=</span> read_comma_separated_values_as_matrix(football_plays_filename)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"This matrix contains (</span><span class="sc">{</span><span class="bu">len</span>(row_oriented_matrix)<span class="sc">}</span><span class="ss">) rows and (</span><span class="sc">{</span><span class="bu">len</span>(row_oriented_matrix[<span class="dv">0</span>])<span class="sc">}</span><span class="ss">) columns."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -373,7 +373,7 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="transpose-matrix-so-that-it-is-column-oriented" class="level3">
 <h3 class="anchored" data-anchor-id="transpose-matrix-so-that-it-is-column-oriented">Transpose matrix so that it is column-oriented</h3>
-<div id="285492d4" class="cell" data-execution_count="7">
+<div id="66219958" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>columnar_matrix <span class="op">=</span> transpose_matrix(row_oriented_matrix)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"This matrix contains (</span><span class="sc">{</span><span class="bu">len</span>(columnar_matrix)<span class="sc">}</span><span class="ss">) columns and (</span><span class="sc">{</span><span class="bu">len</span>(columnar_matrix[<span class="dv">0</span>])<span class="sc">}</span><span class="ss">) rows."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -385,12 +385,12 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <section id="get-all-of-my-column-names" class="level2">
 <h2 class="anchored" data-anchor-id="get-all-of-my-column-names">Get all of my column names</h2>
 <p>Now I want to validate that my data is organized as expected by getting the first item in all of my columns. I expect this to be the name of the column because I have not parsed out the names from the data.</p>
-<div id="c0212f20" class="cell" data-execution_count="8">
+<div id="512562a6" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>column_names <span class="op">=</span> [column[<span class="dv">0</span>] <span class="cf">for</span> column <span class="kw">in</span> columnar_matrix]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pandas.DataFrame(column_names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="65">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_83b2ab8e_ac78_42be_8cf8_e2c59ae428c1"><tbody><tr>
+<table id="itables_9c41c5df_219c_4641_8549_cca3f216221b"><tbody><tr>
     <td style="vertical-align:middle; text-align:left">
     <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
@@ -455,11 +455,11 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <script type="module">
     const { ITable, jQuery: $ } = await import(window._datatables_src_for_itables_2_4_2);
 
-    document.querySelectorAll("#itables_83b2ab8e_ac78_42be_8cf8_e2c59ae428c1:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_9c41c5df_219c_4641_8549_cca3f216221b:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "order": [], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>0</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"GameId\"], [\"GameDate\"], [\"Quarter\"], [\"Minute\"], [\"Second\"], [\"OffenseTeam\"], [\"DefenseTeam\"], [\"Down\"], [\"ToGo\"], [\"YardLine\"], [\"\"], [\"SeriesFirstDown\"], [\"\"], [\"NextScore\"], [\"Description\"], [\"TeamWin\"], [\"\"], [\"\"], [\"SeasonYear\"], [\"Yards\"], [\"Formation\"], [\"PlayType\"], [\"IsRush\"], [\"IsPass\"], [\"IsIncomplete\"], [\"IsTouchdown\"], [\"PassType\"], [\"IsSack\"], [\"IsChallenge\"], [\"IsChallengeReversed\"], [\"Challenger\"], [\"IsMeasurement\"], [\"IsInterception\"], [\"IsFumble\"], [\"IsPenalty\"], [\"IsTwoPointConversion\"], [\"IsTwoPointConversionSuccessful\"], [\"RushDirection\"], [\"YardLineFixed\"], [\"YardLineDirection\"], [\"IsPenaltyAccepted\"], [\"PenaltyTeam\"], [\"IsNoPlay\"], [\"PenaltyType\"], [\"PenaltyYards\"]]"};
+        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "order": [], "classes": ["display", "nowrap"], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>0</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"GameId\"], [\"GameDate\"], [\"Quarter\"], [\"Minute\"], [\"Second\"], [\"OffenseTeam\"], [\"DefenseTeam\"], [\"Down\"], [\"ToGo\"], [\"YardLine\"], [\"\"], [\"SeriesFirstDown\"], [\"\"], [\"NextScore\"], [\"Description\"], [\"TeamWin\"], [\"\"], [\"\"], [\"SeasonYear\"], [\"Yards\"], [\"Formation\"], [\"PlayType\"], [\"IsRush\"], [\"IsPass\"], [\"IsIncomplete\"], [\"IsTouchdown\"], [\"PassType\"], [\"IsSack\"], [\"IsChallenge\"], [\"IsChallengeReversed\"], [\"Challenger\"], [\"IsMeasurement\"], [\"IsInterception\"], [\"IsFumble\"], [\"IsPenalty\"], [\"IsTwoPointConversion\"], [\"IsTwoPointConversionSuccessful\"], [\"RushDirection\"], [\"YardLineFixed\"], [\"YardLineDirection\"], [\"IsPenaltyAccepted\"], [\"PenaltyTeam\"], [\"IsNoPlay\"], [\"PenaltyType\"], [\"PenaltyYards\"]]"};
         new ITable(table, dt_args);
     });
 </script>
@@ -468,22 +468,23 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 </section>
 <section id="generate-summary-statistics-for-each-column" class="level2">
 <h2 class="anchored" data-anchor-id="generate-summary-statistics-for-each-column">Generate summary statistics for each column</h2>
-<div id="547508e4" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>summary_statistics_list <span class="op">=</span> [calculate_summary_statistics(column) <span class="cf">for</span> column <span class="kw">in</span> columnar_matrix]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(summary_statistics_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<p>This <code>calculate_summary_statistics()</code> function takes in a list as input and outputs a dictionary of summary statistics. A <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionary</a> is a mapping between a key such as <code>Yards</code> and a value such as <code>3.6</code>. I can also think of it as a pair of same length lists where each item in one list is connected to an item in the other list.</p>
+<div id="dce4d048" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>list_of_summary_statistics <span class="op">=</span> [calculate_summary_statistics(column) <span class="cf">for</span> column <span class="kw">in</span> columnar_matrix]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(list_of_summary_statistics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
 <pre><code>45</code></pre>
 </div>
 </div>
 <section id="view-the-mean-of-every-metric" class="level3">
 <h3 class="anchored" data-anchor-id="view-the-mean-of-every-metric">View the mean of every metric</h3>
 <p>I can display a <a href="https://stackoverflow.com/a/46577585">dictionary as a dataframe</a> by putting square brackets around the variable name. I am also going to ignore metrics with a mean of zero since I am assuming that they are uninformative.</p>
-<div id="c599e704" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>metric_means <span class="op">=</span> {summary[<span class="st">'name'</span>]: summary[<span class="st">'mean'</span>] <span class="cf">for</span> summary <span class="kw">in</span> summary_statistics_list <span class="cf">if</span> summary[<span class="st">'mean'</span>] <span class="op">!=</span> <span class="dv">0</span>}</span>
+<div id="d5d49b52" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>metric_means <span class="op">=</span> {summary[<span class="st">'name'</span>]: summary[<span class="st">'mean'</span>] <span class="cf">for</span> summary <span class="kw">in</span> list_of_summary_statistics <span class="cf">if</span> summary[<span class="st">'mean'</span>] <span class="op">!=</span> <span class="dv">0</span>}</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pandas.DataFrame([metric_means])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="67">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_c37eafa8_90b1_436a_82c6_102876c16429"><tbody><tr>
+<table id="itables_405910eb_1cd0_4174_b083_088be0080d78"><tbody><tr>
     <td style="vertical-align:middle; text-align:left">
     <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
@@ -548,11 +549,143 @@ This is the <code>init_notebook_mode</code> cell from ITables v2.4.2<br>
 <script type="module">
     const { ITable, jQuery: $ } = await import(window._datatables_src_for_itables_2_4_2);
 
-    document.querySelectorAll("#itables_c37eafa8_90b1_436a_82c6_102876c16429:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_405910eb_1cd0_4174_b083_088be0080d78:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": null, "topEnd": null, "bottomStart": null, "bottomEnd": null}, "order": [], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>GameId</th>\n      <th>Quarter</th>\n      <th>Minute</th>\n      <th>Second</th>\n      <th>Down</th>\n      <th>ToGo</th>\n      <th>YardLine</th>\n      <th>SeriesFirstDown</th>\n      <th>SeasonYear</th>\n      <th>Yards</th>\n      <th>IsRush</th>\n      <th>IsPass</th>\n      <th>IsIncomplete</th>\n      <th>IsTouchdown</th>\n      <th>IsSack</th>\n      <th>IsChallenge</th>\n      <th>IsChallengeReversed</th>\n      <th>IsInterception</th>\n      <th>IsFumble</th>\n      <th>IsPenalty</th>\n      <th>IsTwoPointConversion</th>\n      <th>IsTwoPointConversionSuccessful</th>\n      <th>YardLineFixed</th>\n      <th>IsPenaltyAccepted</th>\n      <th>IsNoPlay</th>\n      <th>PenaltyYards</th>\n    </tr>\n  </thead></table>", "data_json": "[[2024196000.0, 2.572134, 6.336261, 27.506559, 1.536156, 6.585797, 26.433328, 0.412571, 2024.0, 3.854644, 0.285832, 0.366928, 0.124299, 0.029859, 0.027664, 0.00259, 0.000976, 0.008352, 0.012818, 0.074752, 0.002853, 0.001089, 58.963628, 0.066156, 0.050129, 0.523188]]"};
+        let dt_args = {"layout": {"topStart": null, "topEnd": null, "bottomStart": null, "bottomEnd": null}, "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "order": [], "classes": ["display", "nowrap"], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>GameId</th>\n      <th>Quarter</th>\n      <th>Minute</th>\n      <th>Second</th>\n      <th>Down</th>\n      <th>ToGo</th>\n      <th>YardLine</th>\n      <th>SeriesFirstDown</th>\n      <th>SeasonYear</th>\n      <th>Yards</th>\n      <th>IsRush</th>\n      <th>IsPass</th>\n      <th>IsIncomplete</th>\n      <th>IsTouchdown</th>\n      <th>IsSack</th>\n      <th>IsChallenge</th>\n      <th>IsChallengeReversed</th>\n      <th>IsInterception</th>\n      <th>IsFumble</th>\n      <th>IsPenalty</th>\n      <th>IsTwoPointConversion</th>\n      <th>IsTwoPointConversionSuccessful</th>\n      <th>YardLineFixed</th>\n      <th>IsPenaltyAccepted</th>\n      <th>IsNoPlay</th>\n      <th>PenaltyYards</th>\n    </tr>\n  </thead></table>", "data_json": "[[2024196000.0, 2.572134, 6.336261, 27.506559, 1.536156, 6.585797, 26.433328, 0.412571, 2024.0, 3.854644, 0.285832, 0.366928, 0.124299, 0.029859, 0.027664, 0.00259, 0.000976, 0.008352, 0.012818, 0.074752, 0.002853, 0.001089, 58.963628, 0.066156, 0.050129, 0.523188]]"};
+        new ITable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+</section>
+</section>
+<section id="organize-summary-statistics-into-a-table" class="level2">
+<h2 class="anchored" data-anchor-id="organize-summary-statistics-into-a-table">Organize summary statistics into a table</h2>
+<p>I have calculated summary statistics column of my data. Now I want to organize that data into a table so that I can visualize it. I have created a dictionary of summary metrics for each dimension of my data such as <code>Yards</code> and I have stored all of those dictionaries in a list called <code>summary_statistics_list</code>. What I want is a table that looks something like the following.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>name</th>
+<th>mean</th>
+<th>median</th>
+<th>standard-deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Yards</td>
+<td>3.6</td>
+<td>4.2</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>IsRush</td>
+<td>0.6</td>
+<td>0.4</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
+<p>This again looks like a matrix and so I think I will try to convert my list of dictionaries into a list of lists, which is how I am representing a matrix. Before I merge my dictionaries into a super dictionary I want to remove any dictionaries with a <code>count</code> value of zero because that indicates that I was not able to use any of the values and they will just add visual clutter.</p>
+<section id="remove-uninformative-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="remove-uninformative-dictionaries">Remove uninformative dictionaries</h3>
+<div id="91dff42c" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>clean_list_of_summary_statistics <span class="op">=</span> [dictionary <span class="cf">for</span> dictionary <span class="kw">in</span> list_of_summary_statistics <span class="cf">if</span> dictionary[<span class="st">'count'</span>] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"There are (</span><span class="sc">{</span><span class="bu">len</span>(clean_list_of_summary_statistics)<span class="sc">}</span><span class="ss">) columns which passed filtration out of the total of (</span><span class="sc">{</span><span class="bu">len</span>(list_of_summary_statistics)<span class="sc">}</span><span class="ss">) columns for which I generated statistics."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>There are (29) columns which passed filtration out of the total of (45) columns for which I generated statistics.</code></pre>
+</div>
+</div>
+</section>
+<section id="merge-individual-dictionaries-into-a-super-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="merge-individual-dictionaries-into-a-super-dictionary">Merge individual dictionaries into a super dictionary</h3>
+<p>I recorded my thinking for using the list comprehension merged inside a dictionary comprehension in <a href="https://github.com/billingross/loopy/issues/6">this issue</a>.</p>
+<div id="bedb1a90" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>super_summary_statistics_dictionary <span class="op">=</span> {key: [dictionary[key] <span class="cf">for</span> dictionary <span class="kw">in</span> clean_list_of_summary_statistics] <span class="cf">for</span> key <span class="kw">in</span> clean_list_of_summary_statistics[<span class="dv">0</span>].keys()}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(super_summary_statistics_dictionary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<pre><code>8</code></pre>
+</div>
+</div>
+</section>
+<section id="visualize-summary-statistics-table" class="level3">
+<h3 class="anchored" data-anchor-id="visualize-summary-statistics-table">Visualize summary statistics table</h3>
+<div id="f579be94" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>pandas.DataFrame(super_summary_statistics_dictionary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
+<!--| quarto-html-table-processing: none -->
+<table id="itables_fec7a8e4_9553_47f7_a612_aa8089eb8ae9"><tbody><tr>
+    <td style="vertical-align:middle; text-align:left">
+    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+    Loading ITables v2.4.2 from the <code>init_notebook_mode</code> cell...
+    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+    </tr></tbody></table>
+<script type="module">
+    const { ITable, jQuery: $ } = await import(window._datatables_src_for_itables_2_4_2);
+
+    document.querySelectorAll("#itables_fec7a8e4_9553_47f7_a612_aa8089eb8ae9:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "order": [], "classes": ["display", "nowrap"], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>name</th>\n      <th>mean</th>\n      <th>median</th>\n      <th>min</th>\n      <th>max</th>\n      <th>variance</th>\n      <th>standard-deviation</th>\n      <th>count</th>\n    </tr>\n  </thead></table>", "data_json": "[[\"GameId\", 2024196000.0, 2024111002.0, 2024090500.0, 2025012601.0, 72302810000.0, 268891.810305, 53283], [\"Quarter\", 2.572134, 3.0, 1.0, 5.0, 1.255349, 1.120424, 53283], [\"Minute\", 6.336261, 6.0, 0.0, 15.0, 21.55802, 4.643061, 53283], [\"Second\", 27.50656, 27.0, 0.0, 59.0, 335.1076, 18.305945, 53283], [\"Down\", 1.536156, 1.0, 0.0, 4.0, 1.462128, 1.209185, 53283], [\"ToGo\", 6.585797, 8.0, 0.0, 40.0, 26.31877, 5.130182, 53283], [\"YardLine\", 26.43333, 30.0, 0.0, 100.0, 321.8561, 17.940349, 53283], [\"SeriesFirstDown\", 0.4125706, 0.0, 0.0, 1.0, 0.2423607, 0.492301, 53283], [\"NextScore\", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 53283], [\"TeamWin\", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 53283], [\"SeasonYear\", 2024.0, 2024.0, 2024.0, 2024.0, 0.0, 0.0, 53283], [\"Yards\", 3.854644, 0.0, -20.0, 102.0, 60.16015, 7.756298, 53283], [\"IsRush\", 0.2858323, 0.0, 0.0, 1.0, 0.204136, 0.451814, 53283], [\"IsPass\", 0.3669275, 0.0, 0.0, 1.0, 0.2322961, 0.481971, 53283], [\"IsIncomplete\", 0.1242986, 0.0, 0.0, 1.0, 0.1088505, 0.329925, 53283], [\"IsTouchdown\", 0.02985943, 0.0, 0.0, 1.0, 0.02896839, 0.170201, 53283], [\"IsSack\", 0.02766361, 0.0, 0.0, 1.0, 0.02689884, 0.164009, 53283], [\"IsChallenge\", 0.002589944, 0.0, 0.0, 1.0, 0.002583285, 0.050826, 53283], [\"IsChallengeReversed\", 0.000975921, 0.0, 0.0, 1.0, 0.0009749869, 0.031225, 53283], [\"IsMeasurement\", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 53283], [\"IsInterception\", 0.008351632, 0.0, 0.0, 1.0, 0.008282038, 0.091006, 53283], [\"IsFumble\", 0.01281835, 0.0, 0.0, 1.0, 0.01265427, 0.112491, 53283], [\"IsPenalty\", 0.0747518, 0.0, 0.0, 1.0, 0.06916526, 0.262993, 53283], [\"IsTwoPointConversion\", 0.002852692, 0.0, 0.0, 1.0, 0.002844608, 0.053335, 53283], [\"IsTwoPointConversionSuccessful\", 0.001088527, 0.0, 0.0, 1.0, 0.001087363, 0.032975, 53283], [\"YardLineFixed\", 58.96363, 59.0, 0.0, 100.0, 796.9065, 28.229532, 53283], [\"IsPenaltyAccepted\", 0.06615618, 0.0, 0.0, 1.0, 0.0617807, 0.248557, 53283], [\"IsNoPlay\", 0.05012856, 0.0, 0.0, 1.0, 0.04761658, 0.218212, 53283], [\"PenaltyYards\", 0.5231875, 0.0, 0.0, 48.0, 5.663228, 2.379754, 53283]]"};
         new ITable(table, dt_args);
     });
 </script>
