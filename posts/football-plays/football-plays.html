@@ -197,13 +197,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="import-dependencies" class="level1">
 <h1>Import dependencies</h1>
-<div id="c6f02b1d" class="cell" data-execution_count="1">
+<div id="a32d44a6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="functions" class="level1">
 <h1>Functions</h1>
-<div id="4cf43102" class="cell" data-execution_count="2">
+<div id="6e13469e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_comma_separated_values_as_matrix(filename: <span class="bu">str</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Read a comma separated values file into a matrix represented as a list of lists.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>I will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.</p>
-<div id="fdb98a0f" class="cell" data-execution_count="3">
+<div id="4a9e3c6d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>football_plays_filename <span class="op">=</span> <span class="st">"football-plays-2024.csv"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>football_plays_matrix <span class="op">=</span> read_comma_separated_values_as_matrix(football_plays_filename)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"This matrix contains (</span><span class="sc">{</span><span class="bu">len</span>(football_plays_matrix)<span class="sc">}</span><span class="ss">) rows and (</span><span class="sc">{</span><span class="bu">len</span>(football_plays_matrix[<span class="dv">0</span>])<span class="sc">}</span><span class="ss">) columns."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
