@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://billingross.github.io/loopy/football-plays.html</loc>
+    <loc>https://billingross.github.io/loopy/about.html</loc>
+    <lastmod>2025-06-27T18:36:01.943Z</lastmod>
+  </url>
+  <url>
+    <loc>https://billingross.github.io/loopy/posts/football-plays/football-plays.html</loc>
     <lastmod>2025-06-27T21:10:17.045Z</lastmod>
   </url>
   <url>
     <loc>https://billingross.github.io/loopy/index.html</loc>
     <lastmod>2025-06-27T18:36:01.944Z</lastmod>
-  </url>
-  <url>
-    <loc>https://billingross.github.io/loopy/posts/football-plays/football-plays.html</loc>
-    <lastmod>2025-06-27T18:36:01.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://billingross.github.io/loopy/about.html</loc>
-    <lastmod>2025-06-27T18:36:01.943Z</lastmod>
   </url>
 </urlset>

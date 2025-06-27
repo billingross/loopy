@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "football-plays.html",
-    "href": "football-plays.html",
-    "title": "Analyze football plays",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "I want to import football play data from a comma-separated values file and store it as a matrix represented as a list of lists."
-  },
-  {
-    "objectID": "football-plays.html#organize-my-data-as-a-column-oriented-matrix",
-    "href": "football-plays.html#organize-my-data-as-a-column-oriented-matrix",
-    "title": "Analyze football plays",
-    "section": "Organize my data as a column-oriented matrix",
-    "text": "Organize my data as a column-oriented matrix\nA matrix is a structure for organizing data into columns and rows. In Python I represent a matrix as a list of lists.\nIn the parlance of relational databases a row-oriented database is one where all of the dimensions of a particular thing are linked together. In this dataset each row in the comma separated values table corresponds to a single play in a football game. My data will initially be row-oriented because Python reads files line-by-line. This means that each list in my matrix will contain all of the metrics for one particular play.\nThis is not particularly useful for me because I want to identify patterns within each dimension of data and use those dimensions to make predictions. I want to transform my dataset to by column-oriented so that I can do that. A column-oriented database is one where all of the values of a particular metric are stored together which makes it easier to pick out only the metrics I am interested in and use statistics to measure them. Instead of each list in my matrix storing all the metrics for a particular play I will organize it so that each list stores all the vales for a particular metric such as Yards.\n\nRead the data into a row-oriented matrix\nI will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.\n\nfootball_plays_filename = \"posts/football-plays/football-plays-2024.csv\"\nrow_oriented_matrix = read_comma_separated_values_as_matrix(football_plays_filename)\nprint(f\"This matrix contains ({len(row_oriented_matrix)}) rows and ({len(row_oriented_matrix[0])}) columns.\")\n\nThis matrix contains (53284) rows and (45) columns.\n\n\n\n\nTranspose matrix so that it is column-oriented\n\ncolumnar_matrix = transpose_matrix(row_oriented_matrix)\nprint(f\"This matrix contains ({len(columnar_matrix)}) columns and ({len(columnar_matrix[0])}) rows.\")\n\nThis matrix contains (45) columns and (53284) rows."
-  },
-  {
-    "objectID": "football-plays.html#get-all-of-my-column-names",
-    "href": "football-plays.html#get-all-of-my-column-names",
-    "title": "Analyze football plays",
-    "section": "Get all of my column names",
-    "text": "Get all of my column names\nNow I want to validate that my data is organized as expected by getting the first item in all of my columns. I expect this to be the name of the column because I have not parsed out the names from the data.\n\ncolumn_names = [column[0] for column in columnar_matrix]\npandas.DataFrame(column_names)\n\n\n\n    \n    \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n    Loading ITables v2.4.2 from the init_notebook_mode cell...\n    (need help?)"
-  },
-  {
-    "objectID": "football-plays.html#generate-summary-statistics-for-each-column",
-    "href": "football-plays.html#generate-summary-statistics-for-each-column",
-    "title": "Analyze football plays",
-    "section": "Generate summary statistics for each column",
-    "text": "Generate summary statistics for each column\n\nsummary_statistics_list = [calculate_summary_statistics(column) for column in columnar_matrix]\nlen(summary_statistics_list)\n\n45\n\n\n\nView the mean of every metric\nI can display a dictionary as a dataframe by putting square brackets around the variable name.\n\nmetric_means = {summary['name']: summary['mean'] for summary in summary_statistics_list}\npandas.DataFrame([metric_means])\n\n\n\n    \n    \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n    Loading ITables v2.4.2 from the init_notebook_mode cell...\n    (need help?)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "loopy",
-    "section": "",
-    "text": "Analyze football plays\n\n\n\nfootball\n\nmatrix\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
+    "text": "About this blog"
   },
   {
     "objectID": "posts/football-plays/football-plays.html",
@@ -42,10 +14,10 @@
     "text": "Introduction\nI want to import football play data from a comma-separated values file and store it as a matrix represented as a list of lists.\n\n\nImport dependencies\n\nimport csv\n\n\n\nFunctions\n\ndef read_comma_separated_values_as_matrix(filename: str):\n    \"\"\"Read a comma separated values file into a matrix represented as a list of lists.\n\n    Arguments:\n        filename (str): The name of the comma separated values file to import.\n    Returns:\n        (list): This list of lists contains the data from the comma separated values file.\n    \"\"\"\n    with open(filename, 'rt') as file_handle:\n        # Reference: https://stackoverflow.com/questions/30076209/import-csv-file-into-a-matrix-array-in-python\n        reader = csv.reader(file_handle)\n        data_as_list_of_lists = list(reader)\n        return data_as_list_of_lists     \n\n\n\nMethods\nI will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.\n\nfootball_plays_filename = \"football-plays-2024.csv\"\nfootball_plays_matrix = read_comma_separated_values_as_matrix(football_plays_filename)\nprint(f\"This matrix contains ({len(football_plays_matrix)}) rows and ({len(football_plays_matrix[0])}) columns.\")\n\nThis matrix contains (53284) rows and (45) columns."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "loopy",
     "section": "",
-    "text": "About this blog"
+    "text": "Analyze football plays\n\n\n\nfootball\n\nmatrix\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
   }
 ]
