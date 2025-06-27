@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "loopy/about.html",
+    "href": "loopy/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "loopy/posts/football-plays/football-plays.html",
+    "href": "loopy/posts/football-plays/football-plays.html",
+    "title": "Analyze football plays",
+    "section": "",
+    "text": "Introduction\nI want to import football play data from a comma-separated values file and store it as a matrix represented as a list of lists.\n\n\nImport dependencies\n\nimport csv\n\n\n\nFunctions\n\ndef read_comma_separated_values_as_matrix(filename: str):\n    \"\"\"Read a comma separated values file into a matrix represented as a list of lists.\n\n    Arguments:\n        filename (str): The name of the comma separated values file to import.\n    Returns:\n        (list): This list of lists contains the data from the comma separated values file.\n    \"\"\"\n    with open(filename, 'rt') as file_handle:\n        # Reference: https://stackoverflow.com/questions/30076209/import-csv-file-into-a-matrix-array-in-python\n        reader = csv.reader(file_handle)\n        data_as_list_of_lists = list(reader)\n        return data_as_list_of_lists     \n\n\n\nMethods\nI will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.\n\nfootball_plays_filename = \"football-plays-2024.csv\"\nfootball_plays_matrix = read_comma_separated_values_as_matrix(football_plays_filename)\nprint(f\"This matrix contains ({len(football_plays_matrix)}) rows and ({len(football_plays_matrix[0])}) columns.\")\n\nThis matrix contains (53284) rows and (45) columns."
+  },
+  {
+    "objectID": "posts/football-plays/football-plays.html",
+    "href": "posts/football-plays/football-plays.html",
+    "title": "Analyze football plays",
+    "section": "",
+    "text": "Introduction\nI want to import football play data from a comma-separated values file and store it as a matrix represented as a list of lists.\n\n\nImport dependencies\n\nimport csv\n\n\n\nFunctions\n\ndef read_comma_separated_values_as_matrix(filename: str):\n    \"\"\"Read a comma separated values file into a matrix represented as a list of lists.\n\n    Arguments:\n        filename (str): The name of the comma separated values file to import.\n    Returns:\n        (list): This list of lists contains the data from the comma separated values file.\n    \"\"\"\n    with open(filename, 'rt') as file_handle:\n        # Reference: https://stackoverflow.com/questions/30076209/import-csv-file-into-a-matrix-array-in-python\n        reader = csv.reader(file_handle)\n        data_as_list_of_lists = list(reader)\n        return data_as_list_of_lists     \n\n\n\nMethods\nI will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.\n\nfootball_plays_filename = \"football-plays-2024.csv\"\nfootball_plays_matrix = read_comma_separated_values_as_matrix(football_plays_filename)\nprint(f\"This matrix contains ({len(football_plays_matrix)}) rows and ({len(football_plays_matrix[0])}) columns.\")\n\nThis matrix contains (53284) rows and (45) columns."
+  },
+  {
+    "objectID": "loopy/index.html",
+    "href": "loopy/index.html",
+    "title": "loopy",
+    "section": "",
+    "text": "Analyze football plays\n\n\n\nfootball\n\nmatrix\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "loopy",
+    "section": "",
+    "text": "Analyze football plays\n\n\n\nfootball\n\nmatrix\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyze football plays\n\n\n\nfootball\n\nmatrix\n\n\n\n\n\n\n\n\n\nJun 25, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
+  }
+]

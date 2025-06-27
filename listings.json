@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/loopy/index.html",
+    "items": [
+      "/loopy/posts/football-plays/football-plays.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/football-plays/football-plays.html",
+      "/loopy/posts/football-plays/football-plays.html"
+    ]
+  }
+]
