@@ -10,4 +10,4 @@ about:
 
 ---
 
-I am an aspiring ~~prostitute~~ ~anal~yst learning (debatable) statistics as I go and sharing my journey with bicurious folks. I take this seriously and I care about you. Now with **more photos**. {{ Stars Are Blind - Paris Hilton }}
+I am an aspiring ~~prostitute~~ ~anal~yst learning (debatable) statistics as I go and sharing my journey with bicurious folks. I take this seriously and I care about you. Now with **[more photos](https://github.com/billingross/loopy/tree/main/rotterdam_or_anywhere)**. {{ Stars Are Blind - Paris Hilton }}
