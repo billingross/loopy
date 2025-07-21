@@ -7,7 +7,7 @@ jupyter: python3
 author: Paul Billing-Ross
 date: 2025-07-21
 ---
-# and the willing obey.
+# and the willing oblige.
 
 A strapping European man in a skimpy workout fit sits down next to me at the bar. "It looks we are a couple.", he offers with jockular enthusiasm. The synapses of my mind fan out in a wave, exploring the universe of unexpected possibilities reaching out in spacetime ahead of me. I hesitate for a moment to reflect on my decision to sit in a seat next to one already reserved. The bartended had registered my reticence when I approached the bar. "That one is open". Yes, but how open?
 
