@@ -1,5 +1,5 @@
 ---
-title: "loopy"
+title: "This is my database development blog."
 listing:
   contents: posts
   sort: "date desc"

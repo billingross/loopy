@@ -6,6 +6,9 @@ format:
 jupyter: python3
 author: Paul Billing-Ross
 date: 2025-07-22
+categories:
+  - football
+  - Mina Kimes
 ---
 
 ![Image 1. The face of Mina Kimes is superimposed over a screenshot of Jaqen H'ghar from the television series Game of Thrones. A text box in the top left corner reads "The Many Faced Woman".](the-many-faced-woman.png)

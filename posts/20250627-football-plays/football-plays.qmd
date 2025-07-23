@@ -4,6 +4,13 @@ format:
   html:
     code-fold: false
 jupyter: python3
+date: 06-27-2025
+author: Paul Billing-Ross
+categories:
+  - football
+  - Python
+  - tables
+  - statistics
 ---
 
 # Introduction
