@@ -7,50 +7,50 @@
     "text": "I am an aspiring prostitute analyst learning (debatable) statistics as I go and sharing my journey with bicurious folks. I take this seriously and I care about you. Now with more photos. {{ Stars Are Blind - Paris Hilton }}"
   },
   {
-    "objectID": "posts/mind-blazer-beckons/post.html",
-    "href": "posts/mind-blazer-beckons/post.html",
+    "objectID": "posts/20250721-mind-blazer-beckons/post.html",
+    "href": "posts/20250721-mind-blazer-beckons/post.html",
     "title": "Mind Blazer beckons",
     "section": "",
     "text": "A strapping European man in a skimpy workout fit sits down next to me at the bar. “It looks we are a couple.”, he offers with jockular enthusiasm. The synapses of my mind fan out in a wave, exploring the universe of unexpected possibilities reaching out in spacetime ahead of me. I hesitate for a moment to reflect on my decision to sit in a seat next to one already reserved. The bartended had registered my reticence when I approached the bar. “That one is open”. Yes, but how open?\n“Now it does”. Being party to someone expressing their insecurities reminds me of seeing a cat walk in front of me and start to lick its own butthole. It is a normal and hygenic protocol for the cat and it also chose to do it in front of me. What role do I fill in the play of this cat? Does it feel some sense of shame or some hidden desire for intimacy? I wonder if shame is always tied to sex. Freud expressed that. Hold onto my ego while you perform your strange ritual and see that I am largely unphased by the experience. Now let me watch you remain visibly unharmed while I unfurl my freak flag so that I may release my freak sphincter."
   },
   {
-    "objectID": "posts/mind-blazer-beckons/post.html#images",
-    "href": "posts/mind-blazer-beckons/post.html#images",
+    "objectID": "posts/20250721-mind-blazer-beckons/post.html#images",
+    "href": "posts/20250721-mind-blazer-beckons/post.html#images",
     "title": "Mind Blazer beckons",
     "section": "Images",
     "text": "Images\nI went for a walk in Forest Park.\n\n\n\nImage 1. A screenshot of my phone screen while I tried to capture an image of a spider spinning a web in the woods. Text at the top reads “Trying to capture this spider spinning their web and too small :(”. Text in the bottom right corner reads “hat tip to @jdan”. The thumbnail of the previous image in my photos catalogue is of Mina Kimes at the 2025 ESPY Awards.\n\n\n\n\n\nImage 2. An image of a slug on the forest floor next to a puddle of Mayan Mocha and a white paper coffee cup. The slug has a hole in its side. Overlain text at the bottom reads “Hey pal, I see that you have a hole. Care for some mayan mocha frap?”\n\n\n\n\n\nImage 3. Another image of the same slug who in the process of slurping up Mayan Mocha is captioned, “My boy (gender neutral) is about to turn into Shai-Hulud”. Shai-Hulud is the name of the giant sandworm in the fictional Dune canon.\n\n\nAs I stood in the park editing these images in markdown, a bald eagle cried out above me. “That is a bald eagle!”, exclaimed a child. I did not see the bald eagle because I was intently focussed on my phone."
   },
   {
-    "objectID": "posts/football-plays/football-plays.html",
-    "href": "posts/football-plays/football-plays.html",
+    "objectID": "posts/20250627-football-plays/football-plays.html",
+    "href": "posts/20250627-football-plays/football-plays.html",
     "title": "Analyze football plays",
     "section": "",
     "text": "I want to import football play data from a comma-separated values file and store it as a matrix represented as a list of lists."
   },
   {
-    "objectID": "posts/football-plays/football-plays.html#organize-my-data-as-a-column-oriented-matrix",
-    "href": "posts/football-plays/football-plays.html#organize-my-data-as-a-column-oriented-matrix",
+    "objectID": "posts/20250627-football-plays/football-plays.html#organize-my-data-as-a-column-oriented-matrix",
+    "href": "posts/20250627-football-plays/football-plays.html#organize-my-data-as-a-column-oriented-matrix",
     "title": "Analyze football plays",
     "section": "Organize my data as a column-oriented matrix",
     "text": "Organize my data as a column-oriented matrix\nA matrix is a structure for organizing data into columns and rows. In Python I represent a matrix as a list of lists.\nIn the parlance of relational databases a row-oriented database is one where all of the dimensions of a particular thing are linked together. In this dataset each row in the comma separated values table corresponds to a single play in a football game. My data will initially be row-oriented because Python reads files line-by-line. This means that each list in my matrix will contain all of the metrics for one particular play.\nThis is not particularly useful for me because I want to identify patterns within each dimension of data and use those dimensions to make predictions. I want to transform my dataset to by column-oriented so that I can do that. A column-oriented database is one where all of the values of a particular metric are stored together which makes it easier to pick out only the metrics I am interested in and use statistics to measure them. Instead of each list in my matrix storing all the metrics for a particular play I will organize it so that each list stores all the vales for a particular metric such as Yards.\n\nRead the data into a row-oriented matrix\nI will read the football plays data from the comma separated values file into a list of lists and then check the length of the outer list and the first inner list as a validation measure.\n\nfootball_plays_filename = \"football-plays-2024.csv\"\nrow_oriented_matrix = read_comma_separated_values_as_matrix(football_plays_filename)\nprint(f\"This matrix contains ({len(row_oriented_matrix)}) rows and ({len(row_oriented_matrix[0])}) columns.\")\n\nThis matrix contains (53284) rows and (45) columns.\n\n\n\n\nTranspose matrix so that it is column-oriented\n\ncolumnar_matrix = transpose_matrix(row_oriented_matrix)\nprint(f\"This matrix contains ({len(columnar_matrix)}) columns and ({len(columnar_matrix[0])}) rows.\")\n\nThis matrix contains (45) columns and (53284) rows."
   },
   {
-    "objectID": "posts/football-plays/football-plays.html#get-all-of-my-column-names",
-    "href": "posts/football-plays/football-plays.html#get-all-of-my-column-names",
+    "objectID": "posts/20250627-football-plays/football-plays.html#get-all-of-my-column-names",
+    "href": "posts/20250627-football-plays/football-plays.html#get-all-of-my-column-names",
     "title": "Analyze football plays",
     "section": "Get all of my column names",
     "text": "Get all of my column names\nNow I want to validate that my data is organized as expected by getting the first item in all of my columns. I expect this to be the name of the column because I have not parsed out the names from the data.\n\ncolumn_names = [column[0] for column in columnar_matrix]\npandas.DataFrame(column_names)\n\n\n\n    \n    \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n    Loading ITables v2.4.2 from the init_notebook_mode cell...\n    (need help?)"
   },
   {
-    "objectID": "posts/football-plays/football-plays.html#generate-summary-statistics-for-each-column",
-    "href": "posts/football-plays/football-plays.html#generate-summary-statistics-for-each-column",
+    "objectID": "posts/20250627-football-plays/football-plays.html#generate-summary-statistics-for-each-column",
+    "href": "posts/20250627-football-plays/football-plays.html#generate-summary-statistics-for-each-column",
     "title": "Analyze football plays",
     "section": "Generate summary statistics for each column",
     "text": "Generate summary statistics for each column\nThis calculate_summary_statistics() function takes in a list as input and outputs a dictionary of summary statistics. A dictionary is a mapping between a key such as Yards and a value such as 3.6. I can also think of it as a pair of same length lists where each item in one list is connected to an item in the other list.\n\nlist_of_summary_statistics = [calculate_summary_statistics(column) for column in columnar_matrix]\nlen(list_of_summary_statistics)\n\n45\n\n\n\nView the mean of every metric\nI can display a dictionary as a dataframe by putting square brackets around the variable name. I am also going to ignore metrics with a mean of zero since I am assuming that they are uninformative.\n\nmetric_means = {summary['name']: summary['mean'] for summary in list_of_summary_statistics if summary['mean'] != 0}\npandas.DataFrame([metric_means])\n\n\n\n    \n    \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n    Loading ITables v2.4.2 from the init_notebook_mode cell...\n    (need help?)"
   },
   {
-    "objectID": "posts/football-plays/football-plays.html#organize-summary-statistics-into-a-table",
-    "href": "posts/football-plays/football-plays.html#organize-summary-statistics-into-a-table",
+    "objectID": "posts/20250627-football-plays/football-plays.html#organize-summary-statistics-into-a-table",
+    "href": "posts/20250627-football-plays/football-plays.html#organize-summary-statistics-into-a-table",
     "title": "Analyze football plays",
     "section": "Organize summary statistics into a table",
     "text": "Organize summary statistics into a table\nI have calculated summary statistics column of my data. Now I want to organize that data into a table so that I can visualize it. I have created a dictionary of summary metrics for each dimension of my data such as Yards and I have stored all of those dictionaries in a list called summary_statistics_list. What I want is a table that looks something like the following.\n\n\n\nname\nmean\nmedian\nstandard-deviation\n\n\n\n\nYards\n3.6\n4.2\n0.5\n\n\nIsRush\n0.6\n0.4\n0.01\n\n\n\nThis again looks like a matrix and so I think I will try to convert my list of dictionaries into a list of lists, which is how I am representing a matrix. Before I merge my dictionaries into a super dictionary I want to remove any dictionaries with a count value of zero because that indicates that I was not able to use any of the values and they will just add visual clutter.\n\nRemove uninformative dictionaries\n\nclean_list_of_summary_statistics = [dictionary for dictionary in list_of_summary_statistics if dictionary['count'] &gt; 0]\nprint(f\"There are ({len(clean_list_of_summary_statistics)}) columns which passed filtration out of the total of ({len(list_of_summary_statistics)}) columns for which I generated statistics.\")\n\nThere are (29) columns which passed filtration out of the total of (45) columns for which I generated statistics.\n\n\n\n\nMerge individual dictionaries into a super dictionary\nI recorded my thinking for using the list comprehension merged inside a dictionary comprehension in this issue.\n\nsuper_summary_statistics_dictionary = {key: [dictionary[key] for dictionary in clean_list_of_summary_statistics] for key in clean_list_of_summary_statistics[0].keys()}\nlen(super_summary_statistics_dictionary)\n\n8\n\n\n\n\nVisualize summary statistics table\n\npandas.DataFrame(super_summary_statistics_dictionary)\n\n\n\n    \n    \n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\n    Loading ITables v2.4.2 from the init_notebook_mode cell...\n    (need help?)"
@@ -65,8 +65,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "loopy",
+    "title": "This is my database development blog.",
     "section": "",
-    "text": "Analyze football plays\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Many Faced Woman Part 1\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\n\n\n\n\n\n\n\nMind Blazer beckons\n\n\n\n\n\n\n\n\nJul 21, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
+    "text": "The Many Faced Woman Part 1\n\n\n\nfootball\n\nMina Kimes\n\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\n\n\n\n\n\n\n\nMind Blazer beckons\n\n\n\nDanish\n\nslug\n\n\n\n\n\n\n\n\n\nJul 21, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyze football plays\n\n\n\nfootball\n\nPython\n\ntables\n\nstatistics\n\n\n\n\n\n\n\n\n\nJun 27, 2025\n\n\nPaul Billing-Ross\n\n\n\n\n\nNo matching items"
   }
 ]
