@@ -12,4 +12,6 @@ about:
 
 I am an aspiring paramour learning statistics as I go and sharing my journey with bicurious folks. I take this seriously and I care about you.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Xid-UfuOwVs?si=OeOADMdVrgUJol-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+![Mina Kimes surrounded by flowers.](rotterdam_or_anywhere/flower-armor.png)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bnVUHWCynig?si=8Dat_0zbRWkVw5v9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
